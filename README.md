@@ -24,14 +24,12 @@ Dex2C Tool runs the full DEX-to-native compilation pipeline on-device via an emb
 ## Requirements
 
 - Android 7.0 (API 24) or higher
-- [Termux](https://github.com/termux/termux-app) installed from F-Droid
 - Approximately 500 MB of storage for the toolchain (Python, NDK, dependencies)
 
 ## Installation
 
-1. Install Termux from [F-Droid](https://f-droid.org/en/packages/com.termux/).
-2. Launch Dex2C Tool and follow the setup flow. The app bootstraps the Termux environment, installs Python, the Android NDK, and all required dependencies automatically.
-3. Once setup completes, the main protection screen is available.
+1. Launch Dex2C Tool and follow the setup flow. The app bootstraps the built-in Termux environment, installs Python, the Android NDK, and all required dependencies automatically.
+2. Once setup completes, the main protection screen is available.
 
 No manual terminal commands are required.
 
