@@ -56,5 +56,75 @@
     "telegram_contact": "https://t.me/springmusk",
     "github": "https://github.com/springmusk026",
     "website": null
+  },
+  "kill_switch": {
+    "enabled": false,
+    "blocked_versions": [],
+    "message": "This version is no longer supported. Please update to continue using the app."
+  },
+  "rate_limit": {
+    "enabled": false,
+    "max_operations_per_day": 10,
+    "cooldown_message": "You've reached your daily limit. Try again tomorrow."
+  },
+  "blocked_devices": {
+    "enabled": false,
+    "device_ids": [],
+    "message": "This device has been blocked from using the app."
+  },
+  "changelog": [
+    {
+      "version": "1.1.0",
+      "date": "2026-03-22",
+      "changes": [
+        "Added remote config system",
+        "Self-update with in-app download",
+        "Launch sheet, announcements, maintenance mode",
+        "Kill switch, rate limiting, device blocking",
+        "Tips, promo banner, feedback prompt"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "date": "2026-03-20",
+      "changes": [
+        "Initial release",
+        "DEX to C code conversion",
+        "History tracking",
+        "Dark mode support"
+      ]
+    }
+  ],
+  "tips": {
+    "enabled": true,
+    "items": [
+      "Use --custom-loader for better obfuscation",
+      "Enable 'Obfuscate strings' to encrypt string literals in native code",
+      "Turn on 'Dynamic register' for JNI dynamic registration",
+      "Skip synthetic methods to reduce output size",
+      "Join our Telegram for tips and support!"
+    ]
+  },
+  "promo_banner": {
+    "enabled": false,
+    "id": "promo_001",
+    "image_url": null,
+    "action_url": null,
+    "dismissible": true
+  },
+  "feedback": {
+    "enabled": true,
+    "trigger_after_conversions": 3,
+    "title": "Enjoying Dex2C Tool?",
+    "message": "You've protected multiple APKs! Let us know how we're doing.",
+    "rate_url": "https://github.com/springmusk026/Dex2C-Tool",
+    "feedback_url": "https://t.me/springmusk"
+  },
+  "survey": {
+    "enabled": false,
+    "id": "survey_001",
+    "title": "Quick Survey",
+    "message": "Help us improve Dex2C Tool! Takes 30 seconds.",
+    "survey_url": null
   }
 }
