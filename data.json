@@ -4,6 +4,7 @@
     "latest_version_name": "1.1.0",
     "min_supported_version_code": 1,
     "update_url": "https://github.com/springmusk026/Dex2C-Tool/releases/latest",
+    "download_url": "https://github.com/springmusk026/Dex2C-Tool/releases/download/v1.1.0/dex2c-tool-v1.1.0.apk",
     "release_notes": [
       "Added remote config system",
       "Bug fixes and performance improvements"
@@ -56,5 +57,3 @@
     "website": null
   }
 }
-
-
