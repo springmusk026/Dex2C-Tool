@@ -1,1 +1,60 @@
+{
+  "version": {
+    "latest_version_code": 2,
+    "latest_version_name": "1.1.0",
+    "min_supported_version_code": 1,
+    "update_url": "https://github.com/springmusk026/Dex2C-Tool/releases/latest",
+    "release_notes": [
+      "Added remote config system",
+      "Bug fixes and performance improvements"
+    ]
+  },
+  "launch_sheet": {
+    "enabled": true,
+    "id": "launch_2026_03_22",
+    "title": "🎉 Welcome to Dex2C Tool!",
+    "message": "Thank you for using Dex2C Tool. Join our Telegram channel for the latest updates and support.",
+    "image_url": null,
+    "buttons": [
+      {
+        "label": "Join Telegram",
+        "url": "https://t.me/Layout_musk",
+        "style": "primary"
+      },
+      {
+        "label": "Dismiss",
+        "url": null,
+        "style": "secondary"
+      }
+    ],
+    "dismissible": true
+  },
+  "announcement": {
+    "enabled": false,
+    "id": "announce_001",
+    "type": "info",
+    "title": "Scheduled Maintenance",
+    "message": "We will be performing maintenance on March 25th. Some features may be unavailable.",
+    "action_label": "Learn More",
+    "action_url": "https://t.me/Layout_musk"
+  },
+  "maintenance": {
+    "enabled": false,
+    "title": "Under Maintenance",
+    "message": "We're performing scheduled maintenance. The app will be back shortly. Thank you for your patience."
+  },
+  "feature_flags": {
+    "dex2c_enabled": true,
+    "history_enabled": true,
+    "advanced_options_enabled": true,
+    "share_apk_enabled": true
+  },
+  "links": {
+    "telegram_channel": "https://t.me/Layout_musk",
+    "telegram_contact": "https://t.me/springmusk",
+    "github": "https://github.com/springmusk026",
+    "website": null
+  }
+}
+
 
