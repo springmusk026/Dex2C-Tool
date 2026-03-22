@@ -21,6 +21,28 @@ Dex2C Tool runs the full DEX-to-native compilation pipeline on-device via an emb
 - **Kill switch** — Remote version-level app disabling for deprecated releases.
 - **Integrity protection** — Runtime signing certificate verification and obfuscated configuration URL to prevent tampering.
 
+
+## TODO / Known Issues
+
+### ⚠️ Crash on Large APKs (High Class Count)
+
+**Issue:**
+The app may crash when analyzing or protecting APKs that contain a very large number of classes and packages. This is a known and reported issue, typically caused by memory pressure and deep recursive traversal in the APK browser or protection pipeline.
+
+**Planned Fixes:**
+
+* [ ] Implement incremental/lazy loading for package and class trees
+* [ ] Add pagination or chunk-based parsing for large DEX files
+* [ ] Optimize memory usage during APK parsing and method enumeration
+* [ ] Introduce background processing with controlled batching
+* [ ] Improve crash handler to gracefully recover and log large dataset failures
+* [ ] Add user warning for extremely large APKs before processing
+
+**Temporary Workarounds:**
+
+* Use filter rules to limit scope (e.g., target specific packages instead of full app)
+* Avoid enabling all advanced build options on very large APKs
+* Prefer splitting protection runs into smaller subsets where possible
 ## Requirements
 
 - Android 7.0 (API 24) or higher
