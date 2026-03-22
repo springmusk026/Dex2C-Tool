@@ -41,7 +41,7 @@
     "action_url": "https://t.me/Layout_musk"
   },
   "maintenance": {
-    "enabled": true,
+    "enabled": false,
     "title": "Under Maintenance",
     "message": "We're performing scheduled maintenance. The app will be back shortly. Thank you for your patience."
   },
