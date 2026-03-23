@@ -38,7 +38,7 @@
     "dismissible": true
   },
   "announcement": {
-    "enabled": true,
+    "enabled": false,
     "id": "announce_001",
     "type": "info",
     "title": "Scheduled Maintenance",
@@ -135,10 +135,10 @@
     "feedback_url": "https://t.me/springmusk"
   },
   "survey": {
-    "enabled": false,
+    "enabled": true,
     "id": "survey_001",
     "title": "Quick Survey",
     "message": "Help us improve Dex2C Tool! Takes 30 seconds.",
-    "survey_url": null
+    "survey_url": "https://t.me/Layout_musk"
   }
 }
