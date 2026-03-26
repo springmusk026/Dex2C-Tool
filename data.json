@@ -1,20 +1,22 @@
 {
   "version": {
-    "latest_version_code": 2,
-    "latest_version_name": "1.0.1",
+    "latest_version_code": 3,
+    "latest_version_name": "1.0.2",
     "min_supported_version_code": 1,
     "force_update": true,
     "update_url": "https://github.com/springmusk026/Dex2C-Tool/releases/latest",
-    "download_url": "https://github.com/springmusk026/Dex2C-Tool/releases/download/1.0.1/app-release.apk",
+    "download_url": "https://github.com/springmusk026/Dex2C-Tool/releases/download/1.0.2/app-release.apk",
     "release_notes": [
-     "Fixed StackOverflow issue during DEX to native conversion",
-    "Improved overall stability and performance",
-    "UI refinements and better layout consistency",
-    "Added native navigation transitions",
-    "Introduced backup and restore functionality",
-    "Added local save option for outputs",
-    "Reduced UI lag during heavy operations",
-    "Minor bug fixes and internal improvements"
+      "Fixed APK parsing race (stale results no longer overwrite new selections)",
+      "Improved APK name handling (case-insensitive .apk / .APK)",
+      "Cancellation is no longer treated as a failed run (no failed history entry)",
+      "Better dex2c cancellation cleanup (prevents orphan processes)",
+      "Fixed NDK root detection (handles <ver>/build/ndk-build correctly)",
+      "Accepted both java and java17 for dex2c execution",
+      "Offline-friendly Python dependency checks (verify imports before pip installs)",
+      "Safer output APK hygiene (delete stale target; only record output when file exists)",
+      "Added deterministic locale env defaults (LANG/LC_ALL)",
+      "Default custom loader now uses com.musk.Security when not set"
     ]
   },
   "launch_sheet": {
@@ -80,19 +82,35 @@
   },
   "changelog": [
     {
-  "version": "1.0.1",
-  "date": "2026-03-23",
-  "changes": [
-    "Fixed StackOverflow issue during DEX to native conversion",
-    "Improved overall stability and performance",
-    "UI refinements and better layout consistency",
-    "Added native navigation transitions",
-    "Introduced backup and restore functionality",
-    "Added local save option for outputs",
-    "Reduced UI lag during heavy operations",
-    "Minor bug fixes and internal improvements"
-  ]
-},
+      "version": "1.0.2",
+      "date": "2026-03-26",
+      "changes": [
+        "Fixed APK parsing race (stale results no longer overwrite new selections)",
+        "Improved APK name handling (case-insensitive .apk / .APK)",
+        "Cancellation is no longer treated as a failed run (no failed history entry)",
+        "Better dex2c cancellation cleanup (prevents orphan processes)",
+        "Fixed NDK root detection (handles <ver>/build/ndk-build correctly)",
+        "Accepted both java and java17 for dex2c execution",
+        "Offline-friendly Python dependency checks (verify imports before pip installs)",
+        "Safer output APK hygiene (delete stale target; only record output when file exists)",
+        "Added deterministic locale env defaults (LANG/LC_ALL)",
+        "Default custom loader now uses com.musk.Security when not set"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "date": "2026-03-23",
+      "changes": [
+        "Fixed StackOverflow issue during DEX to native conversion",
+        "Improved overall stability and performance",
+        "UI refinements and better layout consistency",
+        "Added native navigation transitions",
+        "Introduced backup and restore functionality",
+        "Added local save option for outputs",
+        "Reduced UI lag during heavy operations",
+        "Minor bug fixes and internal improvements"
+      ]
+    },
     {
       "version": "1.0.0",
       "date": "2026-03-22",
