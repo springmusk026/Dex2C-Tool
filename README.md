@@ -10,8 +10,15 @@ Dex2C Tool runs the full DEX-to-native compilation pipeline on-device via an emb
 
 - **DEX → Native compilation** — Converts selected methods to native C code compiled with the Android NDK.
 - **APK browser** — Parses APK files and displays packages, classes, and methods in a navigable trie structure.
+- **Race-safe APK parsing** — Selecting a new APK cancels any in-flight parse so the class browser never shows stale results.
+- **Robust APK import** — Case-insensitive `.apk` extension handling (e.g. `.APK`) and clearer errors when the selected file cannot be opened.
 - **Filter rule builder** — Whitelist or blacklist specific classes and packages using pattern-based rules.
-- **Advanced build options** — String obfuscation, dynamic JNI registration, synthetic method skipping, custom loaders, and project archives.
+- **Advanced build options** — String obfuscation, dynamic JNI registration, synthetic method skipping, custom loaders (defaults to `com.musk.Security`), and project archives.
+- **Offline-friendly dependency checks** — Verifies required Python imports before attempting `pip install`.
+- **NDK + Java detection** — Correct NDK root detection and accepts both `java` and `java17`.
+- **Graceful cancellation + cleanup** — Cancelling a run stops underlying processes and is not persisted as a failed history entry.
+- **Output hygiene** — Deletes any existing output target before running and only records an output path if the output APK exists.
+- **Deterministic environment** — Sets locale defaults (`LANG`/`LC_ALL`) for consistent tooling behavior.
 - **Resource monitor** — Real-time CPU, RAM, and disk usage during protection runs.
 - **Protection history** — Persistent log of all prior protection runs with detailed output.
 - **Theming** — Dark, light, and AMOLED modes with six accent colors. Preferences persist across sessions.
@@ -21,28 +28,6 @@ Dex2C Tool runs the full DEX-to-native compilation pipeline on-device via an emb
 - **Kill switch** — Remote version-level app disabling for deprecated releases.
 - **Integrity protection** — Runtime signing certificate verification and obfuscated configuration URL to prevent tampering.
 
-
-## TODO / Known Issues
-
-### ⚠️ Crash on Large APKs (High Class Count)
-
-**Issue:**
-The app may crash when analyzing or protecting APKs that contain a very large number of classes and packages. This is a known and reported issue, typically caused by memory pressure and deep recursive traversal in the APK browser or protection pipeline.
-
-**Planned Fixes:**
-
-* [ ] Implement incremental/lazy loading for package and class trees
-* [ ] Add pagination or chunk-based parsing for large DEX files
-* [ ] Optimize memory usage during APK parsing and method enumeration
-* [ ] Introduce background processing with controlled batching
-* [ ] Improve crash handler to gracefully recover and log large dataset failures
-* [ ] Add user warning for extremely large APKs before processing
-
-**Temporary Workarounds:**
-
-* Use filter rules to limit scope (e.g., target specific packages instead of full app)
-* Avoid enabling all advanced build options on very large APKs
-* Prefer splitting protection runs into smaller subsets where possible
 ## Requirements
 
 - Android 7.0 (API 24) or higher
